@@ -685,6 +685,29 @@ const BudgetCalculator = () => {
     descricao: "",
     observacoes: ""
   });
+  const summaryRef = useRef(null);
+
+  const downloadSummaryImage = async () => {
+    if (!summaryRef.current) return;
+    
+    try {
+      const canvas = await html2canvas(summaryRef.current, {
+        backgroundColor: '#0f172a',
+        scale: 2,
+        logging: false,
+        useCORS: true
+      });
+      
+      const image = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.download = `orcamento-murilety-${Date.now()}.png`;
+      link.href = image;
+      link.click();
+    } catch (error) {
+      console.error('Erro ao gerar imagem:', error);
+      alert('Erro ao gerar imagem. Tente novamente.');
+    }
+  };
 
   const calculatePrice = () => {
     const altura = parseFloat(formData.altura) || 0;
