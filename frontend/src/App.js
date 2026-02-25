@@ -923,4 +923,440 @@ Aguardo retorno!`;
   );
 };
 
-export default Calculator;
+// Testimonials Section
+const Testimonials = () => {
+  const testimonials = [
+    {
+      name: "Carlos Silva",
+      role: "Cliente Residencial",
+      text: "Transformou minha sala em uma obra de arte! O Murilety é muito profissional e atencioso. Recomendo demais! 🎨",
+      rating: 5,
+      emoji: "😍"
+    },
+    {
+      name: "Marina Santos",
+      role: "Empresária",
+      text: "Contratei para fazer o mural do meu restaurante. Ficou incrível e meus clientes adoram tirar fotos! 📸",
+      rating: 5,
+      emoji: "🤩"
+    },
+    {
+      name: "João Pedro",
+      role: "Fã do Corinthians",
+      text: "Realizou meu sonho de ter a arte do Corinthians na parede! Detalhes perfeitos, valeu cada centavo! ⚽",
+      rating: 5,
+      emoji: "⚡"
+    },
+    {
+      name: "Ana Paula",
+      role: "Mãe",
+      text: "Fez o quarto do meu filho com tema de super-heróis. Ele não para de mostrar para os amigos! 🦸",
+      rating: 5,
+      emoji: "💙"
+    }
+  ];
+
+  return (
+    <section id="depoimentos" className="py-20 relative">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold gradient-text mb-4">
+            Depoimentos ⭐
+          </h2>
+          <p className="text-xl text-slate-400">O que meus clientes dizem</p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="glass p-6 rounded-2xl card-hover"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                ))}
+              </div>
+              <p className="text-slate-300 mb-4 italic">"{testimonial.text}"</p>
+              <div className="flex items-center gap-3">
+                <div className="text-3xl emoji-3d">{testimonial.emoji}</div>
+                <div>
+                  <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                  <p className="text-sm text-slate-400">{testimonial.role}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// FAQ Section
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const faqs = [
+    {
+      question: "Quanto tempo leva para fazer uma arte?",
+      answer: "O tempo varia de acordo com o tamanho e complexidade. Geralmente, projetos pequenos levam 1-2 dias, médios 3-5 dias e grandes podem levar 1-2 semanas. Farei uma estimativa precisa após avaliar seu projeto!",
+      emoji: "⏰"
+    },
+    {
+      question: "Vocês atendem em quais regiões?",
+      answer: "Atendemos principalmente na Grande São Paulo e interior. Para outras regiões, entre em contato pelo WhatsApp que verificamos a viabilidade e possível taxa de deslocamento.",
+      emoji: "📍"
+    },
+    {
+      question: "Qual a diferença entre os pacotes?",
+      answer: "PLATINUM: 100% executado por mim. GOLD: Eu faço a base e detalhes principais, alunos finalizam sob minha supervisão. SILVER: Executado pela equipe certificada. Todos com qualidade garantida!",
+      emoji: "📦"
+    },
+    {
+      question: "Posso escolher qualquer desenho?",
+      answer: "Sim! Você pode trazer referências, personagens, logos, fotos ou ideias. Faremos uma adaptação criativa para o espaço disponível. Quanto mais detalhes você fornecer, melhor!",
+      emoji: "🎨"
+    },
+    {
+      question: "A tinta é segura e durável?",
+      answer: "Sim! Usamos tintas de alta qualidade, próprias para arte mural, resistentes a água e UV. Com os cuidados adequados, sua arte pode durar muitos anos mantendo as cores vibrantes!",
+      emoji: "✅"
+    },
+    {
+      question: "Como funciona o pagamento?",
+      answer: "Geralmente trabalhamos com 50% de entrada para reservar a data e comprar materiais, e 50% após a conclusão. Aceitamos PIX, transferência e cartão. Tudo combinado antes de começar!",
+      emoji: "💳"
+    },
+    {
+      question: "E se eu não gostar do resultado?",
+      answer: "Isso nunca aconteceu! Sempre mostramos o esboço antes de começar e você acompanha todo o processo. Fazemos ajustes até você ficar 100% satisfeito. Sua felicidade é minha prioridade!",
+      emoji: "😊"
+    },
+    {
+      question: "Vocês fazem arte em teto também?",
+      answer: "Sim! Fazemos arte em paredes, tetos, pisos e até mobília. Se você tem uma superfície, eu tenho a arte perfeita para ela! Entre em contato para falarmos sobre seu projeto.",
+      emoji: "🏠"
+    }
+  ];
+
+  return (
+    <section id="faq" className="py-20 relative">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold gradient-text mb-4">
+            Perguntas Frequentes 💬
+          </h2>
+          <p className="text-xl text-slate-400">Tire suas dúvidas</p>
+        </motion.div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              className="glass rounded-xl overflow-hidden"
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+              >
+                <div className="flex items-center gap-4 flex-1">
+                  <span className="text-3xl emoji-3d">{faq.emoji}</span>
+                  <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
+                </div>
+                <motion.div
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDown className="w-6 h-6 text-ocean-cyan" />
+                </motion.div>
+              </button>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6 pl-20 text-slate-300">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Course Section
+const Course = () => {
+  const courseFeatures = [
+    { icon: "🎓", title: "Técnicas Profissionais", desc: "Aprenda os segredos da arte mural" },
+    { icon: "🎨", title: "Do Básico ao Avançado", desc: "Curso completo para todos os níveis" },
+    { icon: "📹", title: "Aulas em Vídeo", desc: "Conteúdo prático e teórico" },
+    { icon: "💼", title: "Suporte Direto", desc: "Tire dúvidas comigo" },
+    { icon: "⚡", title: "Acesso Vitalício", desc: "Aprenda no seu ritmo" },
+    { icon: "🏆", title: "Certificado", desc: "Comprove sua qualificação" }
+  ];
+
+  return (
+    <section id="curso" className="py-20 relative overflow-hidden">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="relative glass rounded-3xl p-12 md:p-16 neon-glow"
+        >
+          {/* Floating Emojis */}
+          <motion.div
+            className="absolute top-10 left-10 text-6xl emoji-3d"
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            🎨
+          </motion.div>
+          <motion.div
+            className="absolute top-10 right-10 text-6xl emoji-3d"
+            animate={{ y: [0, 20, 0] }}
+            transition={{ duration: 4, repeat: Infinity }}
+          >
+            ✨
+          </motion.div>
+          <motion.div
+            className="absolute bottom-10 left-20 text-6xl emoji-3d"
+            animate={{ rotate: [0, 15, -15, 0] }}
+            transition={{ duration: 5, repeat: Infinity }}
+          >
+            🖌️
+          </motion.div>
+
+          <div className="relative z-10 text-center max-w-4xl mx-auto">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              className="inline-block mb-6"
+            >
+              <div className="text-7xl mb-4">🎓</div>
+            </motion.div>
+
+            <h2 className="text-4xl md:text-6xl font-bold gradient-text mb-6">
+              Aprenda Minha Técnica!
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+              Transforme sua paixão em <span className="text-ocean-cyan font-bold">profissão</span> com o meu curso completo de arte em paredes
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-12">
+              {courseFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="glass p-6 rounded-xl card-hover"
+                >
+                  <div className="text-4xl mb-3 emoji-3d">{feature.icon}</div>
+                  <h3 className="text-white font-bold mb-2">{feature.title}</h3>
+                  <p className="text-sm text-slate-400">{feature.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="space-y-4">
+              <motion.a
+                href={COURSE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 px-12 py-5 rounded-full text-white font-bold text-xl shadow-2xl hover:shadow-pink-500/50 transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <GraduationCap className="w-7 h-7" />
+                QUERO ME INSCREVER AGORA
+                <Sparkles className="w-7 h-7" />
+              </motion.a>
+              
+              <p className="text-sm text-slate-400">
+                🔥 Vagas limitadas • Comece hoje mesmo
+              </p>
+            </div>
+
+            <div className="mt-12 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">50+</div>
+                <div className="text-sm text-slate-400">Alunos Satisfeitos</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">20+</div>
+                <div className="text-sm text-slate-400">Horas de Conteúdo</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">100%</div>
+                <div className="text-sm text-slate-400">Satisfação</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+// Footer
+const Footer = () => {
+  return (
+    <footer className="py-12 relative border-t border-slate-800">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-12 mb-8">
+          {/* Brand */}
+          <div>
+            <h3 className="text-3xl font-bold gradient-text mb-4">MURILETY</h3>
+            <p className="text-slate-400 mb-4">
+              Transformando paredes em arte desde 2023 🎨
+            </p>
+            <div className="flex gap-4">
+              <motion.a
+                href={INSTAGRAM}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-ocean-cyan/20 transition-colors"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Instagram className="w-5 h-5 text-ocean-cyan" />
+              </motion.a>
+              <motion.a
+                href={TIKTOK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-ocean-green/20 transition-colors"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.3 }}
+              >
+                <TikTok className="w-5 h-5 text-ocean-green" />
+              </motion.a>
+              <motion.a
+                href={`https://wa.me/${PHONE}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-ocean-blue/20 transition-colors"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.3 }}
+              >
+                <MessageCircle className="w-5 h-5 text-ocean-blue" />
+              </motion.a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
+              <Zap className="w-5 h-5 text-ocean-cyan" />
+              Links Rápidos
+            </h4>
+            <ul className="space-y-2 text-slate-400">
+              {["sobre", "portfolio", "orcamento", "depoimentos", "faq", "curso"].map((link) => (
+                <li key={link}>
+                  <button
+                    onClick={() => document.getElementById(link)?.scrollIntoView({ behavior: "smooth" })}
+                    className="hover:text-ocean-cyan transition-colors capitalize"
+                  >
+                    {link}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
+              <MessageCircle className="w-5 h-5 text-ocean-cyan" />
+              Contato
+            </h4>
+            <ul className="space-y-3 text-slate-400">
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-ocean-green" />
+                <a href={`https://wa.me/${PHONE}`} className="hover:text-ocean-cyan transition-colors">
+                  (11) 97020-9743
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Instagram className="w-4 h-4 text-ocean-cyan" />
+                <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="hover:text-ocean-cyan transition-colors">
+                  @muriletyofi
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <TikTok className="w-4 h-4 text-ocean-green" />
+                <a href={TIKTOK} target="_blank" rel="noopener noreferrer" className="hover:text-ocean-cyan transition-colors">
+                  @murilety06
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
+          <p className="flex items-center justify-center gap-2 flex-wrap">
+            <span>Feito com</span>
+            <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
+            <span>por Murilety</span>
+            <span>•</span>
+            <span>{new Date().getFullYear()}</span>
+            <span>•</span>
+            <span>Todos os direitos reservados</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+// Main App Component
+function App() {
+  return (
+    <div className="App min-h-screen text-white overflow-x-hidden">
+      <AnimatedBackground />
+      <Navbar />
+      <Hero />
+      <About />
+      <Portfolio />
+      <Calculator />
+      <Testimonials />
+      <FAQ />
+      <Course />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
