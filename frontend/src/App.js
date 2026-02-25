@@ -366,11 +366,6 @@ const Portfolio = () => {
       description: "Goku em arte mural detalhada"
     },
     {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/daldfm2k_465993965_1094889895679783_2955846629740996983_n.jpg",
-      title: "Mural Spider-Man",
-      description: "Homem-Aranha com heróis e vilões"
-    },
-    {
       url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/zgcze7e6_IMG_0743.JPG",
       title: "Arte Cartoon Classic",
       description: "Personagens clássicos de desenhos"
@@ -391,11 +386,6 @@ const Portfolio = () => {
       description: "Disney, Marvel, Celebridades e Desenhos"
     },
     {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/suykpak6_20250721_201336.jpg",
-      title: "Dragon Ball Z Completo",
-      description: "Goku e personagens da saga"
-    },
-    {
       url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/dgu7sv0b_465993965_1094889895679783_2955846629740996983_n.jpg",
       title: "Spider-Man com Cliente Feliz",
       description: "Mural interativo com personagens Marvel"
@@ -404,6 +394,31 @@ const Portfolio = () => {
       url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/6vzhxzn2_20240911_021900.jpg",
       title: "Divertida Mente + Disney",
       description: "Inside Out, Mickey, Stitch e mais"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/xhnyej4f_20250301_224338.jpg",
+      title: "Mural Marvel com Porta",
+      description: "Spider-Man, Capitão América e heróis"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/fmlbtk9m_20250315_155913.jpg",
+      title: "Mural Star Wars",
+      description: "Baby Yoda, Darth Vader e personagens icônicos"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/lyw233p3_20250515_213944.jpg",
+      title: "Arte Cultura Brasileira",
+      description: "Samba, música e personalidades brasileiras"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/bdv6urnf_20250624_060959.jpg",
+      title: "Mural Animes Mix",
+      description: "One Piece, Naruto e personagens de anime"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/rxvhsmak_20250630_232927.jpg",
+      title: "Prateleira Geek One Piece",
+      description: "Luffy e decoração temática de anime"
     }
   ];
 
