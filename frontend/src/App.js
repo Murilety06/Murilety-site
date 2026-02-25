@@ -349,6 +349,20 @@ const About = () => {
 // Portfolio Section
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const row1Ref = React.useRef(null);
+  const row2Ref = React.useRef(null);
+
+  const scrollLeft = (ref) => {
+    if (ref.current) {
+      ref.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = (ref) => {
+    if (ref.current) {
+      ref.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
 
   const portfolioImages = [
     {
