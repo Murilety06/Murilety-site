@@ -620,7 +620,8 @@ const BudgetCalculator = () => {
     pacote: "",
     estilo: "",
     personagem: "nao",
-    descricao: ""
+    descricao: "",
+    observacoes: ""
   });
 
   const calculatePrice = () => {
