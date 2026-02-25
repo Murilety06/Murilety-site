@@ -555,11 +555,33 @@ const Portfolio = () => {
               ))}
             </div>
           </div>
+          </div>
 
           {/* Row 2 */}
-          <div className="overflow-x-auto pb-4 scrollbar-hide">
-            <div className="flex gap-4 md:gap-6" style={{ width: 'max-content' }}>
-              {portfolioImages.slice(Math.ceil(portfolioImages.length / 2)).map((image, index) => (
+          <div className="relative group/row">
+            {/* Left Button - Only visible on desktop */}
+            <motion.button
+              onClick={() => scrollLeft(row2Ref)}
+              className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full glass hover:bg-ocean-green/20 transition-all opacity-0 group-hover/row:opacity-100"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ChevronLeft className="w-6 h-6 text-ocean-green" />
+            </motion.button>
+
+            {/* Right Button - Only visible on desktop */}
+            <motion.button
+              onClick={() => scrollRight(row2Ref)}
+              className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full glass hover:bg-ocean-green/20 transition-all opacity-0 group-hover/row:opacity-100"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ChevronRight className="w-6 h-6 text-ocean-green" />
+            </motion.button>
+
+            <div ref={row2Ref} className="overflow-x-auto pb-4 scrollbar-hide scroll-smooth">
+              <div className="flex gap-4 md:gap-6" style={{ width: 'max-content' }}>
+                {portfolioImages.slice(Math.ceil(portfolioImages.length / 2)).map((image, index) => (
                 <motion.div
                   key={index + Math.ceil(portfolioImages.length / 2)}
                   initial={{ opacity: 0, x: 50 }}
