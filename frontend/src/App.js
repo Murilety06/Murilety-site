@@ -743,14 +743,14 @@ Aguardo retorno!`;
           <p className="text-xl text-slate-400">Faça seu orçamento em 5 passos simples</p>
         </motion.div>
 
-        <div className="glass rounded-3xl p-8 md:p-12">
+        <div className="glass rounded-3xl p-6 md:p-12">
           {/* Progress Bar */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex justify-between mb-4">
-              {[1, 2, 3, 4, 5].map((s) => (
+              {[1, 2, 3, 4, 5, 6].map((s) => (
                 <div
                   key={s}
-                  className={`flex items-center justify-center w-10 h-10 rounded-full font-bold transition-all ${
+                  className={`flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full font-bold text-sm md:text-base transition-all ${
                     s <= step
                       ? "bg-gradient-to-r from-ocean-blue to-ocean-cyan text-white"
                       : "bg-slate-800 text-slate-500"
@@ -764,7 +764,7 @@ Aguardo retorno!`;
               <motion.div
                 className="h-full bg-gradient-to-r from-ocean-blue to-ocean-cyan"
                 initial={{ width: "0%" }}
-                animate={{ width: `${(step / 5) * 100}%` }}
+                animate={{ width: `${(step / 6) * 100}%` }}
                 transition={{ duration: 0.3 }}
               />
             </div>
