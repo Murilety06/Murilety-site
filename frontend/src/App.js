@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import html2canvas from "html2canvas";
 import { 
   Instagram, 
   Youtube as TikTok, 
@@ -21,7 +22,9 @@ import {
   Activity,
   GraduationCap,
   Phone,
-  Mail
+  Mail,
+  Download,
+  Camera
 } from "lucide-react";
 import "@/App.css";
 
