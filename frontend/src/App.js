@@ -419,6 +419,31 @@ const Portfolio = () => {
       url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/rxvhsmak_20250630_232927.jpg",
       title: "Prateleira Geek One Piece",
       description: "Luffy e decoração temática de anime"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/2aisihd2_20240629_183438.jpg",
+      title: "Mural Desenhos Clássicos",
+      description: "Looney Tunes, Tom & Jerry e personagens icônicos"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/63tw1s4i_20241121_174559.jpg",
+      title: "Arte Cassino MC Max Win",
+      description: "Cartas, dados, fichas e tema de jogos"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/ymaygn29_20241204_224445.jpg",
+      title: "Mural Carros Esportivos",
+      description: "Supra, GTR, Lamborghini e supercarros"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/cerqlujs_20250207_205118.jpg",
+      title: "Arte São Paulo City",
+      description: "Ponte Estaiada, Catedral e pontos turísticos"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/1oefhk7t_20250220_002721.jpg",
+      title: "Mural São Paulo FC",
+      description: "SPFC com personagens de animes e cartoons"
     }
   ];
 
