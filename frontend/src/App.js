@@ -1350,7 +1350,7 @@ function App() {
       <Hero />
       <About />
       <Portfolio />
-      <Calculator />
+      <BudgetCalculator />
       <Testimonials />
       <FAQ />
       <Course />
