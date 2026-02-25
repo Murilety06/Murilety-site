@@ -694,6 +694,7 @@ const BudgetCalculator = () => {
 🎨 Estilo: ${formData.estilo}
 👤 Personagem/Logo: ${formData.personagem}
 ${formData.descricao ? `📝 Descrição: ${formData.descricao}` : ""}
+${formData.observacoes ? `\n📝 Observações/Lista de Personagens:\n${formData.observacoes}` : ""}
 
 💰 Valor aproximado: R$ ${price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
 
