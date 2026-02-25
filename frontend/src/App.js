@@ -746,6 +746,9 @@ const BudgetCalculator = () => {
 
   const sendWhatsApp = () => {
     const price = calculatePrice();
+    const entrada = price * 0.1;
+    const restante = price * 0.9;
+    
     const message = `Olá! Gostaria de fazer um orçamento:
     
 📏 Dimensões: ${formData.altura}m x ${formData.largura}m
@@ -755,7 +758,11 @@ const BudgetCalculator = () => {
 ${formData.descricao ? `📝 Descrição: ${formData.descricao}` : ""}
 ${formData.observacoes ? `\n📝 Observações/Lista de Personagens:\n${formData.observacoes}` : ""}
 
-💰 Valor aproximado: R$ ${price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+💰 VALOR TOTAL: R$ ${price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+
+💳 FORMA DE PAGAMENTO:
+• Entrada (10%): R$ ${entrada.toLocaleString("pt-BR", { minimumFractionDigits: 2 })} - para agendar
+• Restante (90%): R$ ${restante.toLocaleString("pt-BR", { minimumFractionDigits: 2 })} - na chegada do artista
 
 Aguardo retorno!`;
 
