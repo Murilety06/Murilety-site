@@ -999,6 +999,25 @@ Aguardo retorno!`;
             </motion.div>
           )}
 
+          {/* Real-time Price Display */}
+          {step < 5 && formData.altura && formData.largura && formData.pacote && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-8 glass p-6 rounded-xl text-center"
+            >
+              <p className="text-slate-400 mb-2">Valor estimado atual</p>
+              <p className="text-4xl font-bold gradient-text">
+                R$ {calculatePrice().toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+              </p>
+              {!formData.estilo && step >= 2 && (
+                <p className="text-sm text-slate-500 mt-2">
+                  * Adicione o estilo para ver o valor final
+                </p>
+              )}
+            </motion.div>
+          )}
+
           {/* Navigation Buttons */}
           <div className="flex justify-between mt-12">
             {step > 1 && (
