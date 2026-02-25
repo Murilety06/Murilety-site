@@ -637,11 +637,11 @@ const BudgetCalculator = () => {
         minPrice = 2000;
         break;
       case "intermediario":
-        basePrice = area * 500;
+        basePrice = area * 350;
         minPrice = 1500;
         break;
       case "profissional":
-        basePrice = area * 300;
+        basePrice = area * 200;
         minPrice = 800;
         break;
       default:
