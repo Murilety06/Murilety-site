@@ -356,34 +356,44 @@ const Portfolio = () => {
       description: "Lettering personalizado para fã do timão"
     },
     {
-      url: "https://i.ibb.co/933nM2Tr/image.png",
-      title: "Realismo",
-      description: "Arte em estilo realista"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/ymqrdroa_IMG_4743.HEIC",
+      title: "Arte Mural",
+      description: "Projeto personalizado"
     },
     {
-      url: "https://i.ibb.co/JDP85Zw/image.png",
-      title: "Personagem",
-      description: "Arte de personagem"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/qgchuaw1_IMG_4833.HEIC",
+      title: "Arte em Parede",
+      description: "Design exclusivo"
     },
     {
-      url: "https://i.ibb.co/vxt9bbw8/image.png",
-      title: "Arte Colorida",
-      description: "Composição vibrante"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/2put81ji_IMG_4364.HEIC",
+      title: "Grafite Artístico",
+      description: "Street art profissional"
     },
     {
-      url: "https://i.ibb.co/cWVsxbn/image.png",
-      title: "Mural",
-      description: "Grande formato"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/doxbkim9_IMG_1380.HEIC",
+      title: "Arte Criativa",
+      description: "Composição única"
     },
     {
-      url: "https://i.ibb.co/Y7BvXwyb/image.png",
-      title: "Grafite",
-      description: "Estilo street art"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/iyrih2jx_IMG_4173.HEIC",
+      title: "Mural Decorativo",
+      description: "Ambiente transformado"
     },
     {
-      url: "https://i.ibb.co/ZR7cWXRw/image.png",
-      title: "Arte Moderna",
-      description: "Design contemporâneo"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/wd0tryl6_IMG_4235.HEIC",
+      title: "Arte Personalizada",
+      description: "Projeto exclusivo"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/tghsulk5_IMG_4367.HEIC",
+      title: "Design em Parede",
+      description: "Criação artística"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/c56bi08i_IMG_4833.HEIC",
+      title: "Arte Contemporânea",
+      description: "Estilo moderno"
     }
   ];
 
