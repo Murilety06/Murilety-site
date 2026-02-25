@@ -489,8 +489,8 @@ const Portfolio = () => {
   );
 };
 
-// Calculator Section (Part 1 - will continue in next file)
-const Calculator = () => {
+// Budget Calculator Section
+const BudgetCalculator = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     altura: "",
