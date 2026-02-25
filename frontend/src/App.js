@@ -351,6 +351,31 @@ const Portfolio = () => {
 
   const portfolioImages = [
     {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/cv7sp1l2_sambistas.jpg",
+      title: "Mural Sambistas Brasileiros",
+      description: "Homenagem à cultura do samba e artistas"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/wg9uv3vc_santos.jpg",
+      title: "Mural Santos FC",
+      description: "Estádio Urbano Caldeira e ídolos santistas"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/vg14m13m_legends.jpg",
+      title: "Legends 360 - Lendas do Esporte",
+      description: "Atletas e personalidades esportivas"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/shwv56o2_mario%20luiji.jpg",
+      title: "Mural Super Mario Bros",
+      description: "Mario e Luigi com personagens Nintendo"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/me7rfdxw_harry.jpg",
+      title: "Mural Harry Potter Completo",
+      description: "Personagens, Hogwarts e elementos mágicos"
+    },
+    {
       url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/qzm9ve5e_7dc50e2f-686a-4948-83fd-68fc47baf6b0.jpg",
       title: "Arte Corinthians",
       description: "Lettering personalizado para fã do timão"
