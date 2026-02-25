@@ -379,6 +379,31 @@ const Portfolio = () => {
       url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/frveat9c_IMG_1034.JPG",
       title: "Arte Motivacional Empresarial",
       description: "Lettering e design corporativo"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/wt77udtr_7dc50e2f-686a-4948-83fd-68fc47baf6b0.jpg",
+      title: "Mural Corinthians 1985",
+      description: "Arte comemorativa com mascote Mosqueteiro"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/517sic8a_5254D2CA-3A6D-49E9-94F9-CE4950F9FD14.jpg",
+      title: "Parede Completa Multi-Personagens",
+      description: "Disney, Marvel, Celebridades e Desenhos"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/suykpak6_20250721_201336.jpg",
+      title: "Dragon Ball Z Completo",
+      description: "Goku e personagens da saga"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/dgu7sv0b_465993965_1094889895679783_2955846629740996983_n.jpg",
+      title: "Spider-Man com Cliente Feliz",
+      description: "Mural interativo com personagens Marvel"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/6vzhxzn2_20240911_021900.jpg",
+      title: "Divertida Mente + Disney",
+      description: "Inside Out, Mickey, Stitch e mais"
     }
   ];
 
