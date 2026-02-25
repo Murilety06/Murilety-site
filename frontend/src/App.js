@@ -1132,12 +1132,47 @@ Aguardo retorno!`;
                   </div>
                 </div>
 
-                <div className="glass p-6 md:p-8 rounded-xl text-center neon-glow">
-                  <p className="text-slate-400 mb-2 text-sm md:text-base">Valor Aproximado</p>
-                  <p className="text-3xl md:text-5xl font-bold gradient-text mb-4">
-                    R$ {calculatePrice().toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
-                  </p>
-                  <p className="text-xs md:text-sm text-slate-400">
+                <div className="glass p-6 md:p-8 rounded-xl neon-glow space-y-4">
+                  <div className="text-center border-b border-slate-700 pb-4">
+                    <p className="text-slate-400 mb-2 text-sm md:text-base">Valor Total do Projeto</p>
+                    <p className="text-3xl md:text-5xl font-bold gradient-text">
+                      R$ {calculatePrice().toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="glass p-4 rounded-xl bg-ocean-cyan/10 border border-ocean-cyan/30">
+                      <p className="text-slate-400 text-xs md:text-sm mb-1">💰 Entrada (10%)</p>
+                      <p className="text-2xl md:text-3xl font-bold text-ocean-cyan">
+                        R$ {(calculatePrice() * 0.1).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                      </p>
+                      <p className="text-xs text-slate-500 mt-1">Para agendar o projeto</p>
+                    </div>
+
+                    <div className="glass p-4 rounded-xl bg-ocean-green/10 border border-ocean-green/30">
+                      <p className="text-slate-400 text-xs md:text-sm mb-1">💵 Restante (90%)</p>
+                      <p className="text-2xl md:text-3xl font-bold text-ocean-green">
+                        R$ {(calculatePrice() * 0.9).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                      </p>
+                      <p className="text-xs text-slate-500 mt-1">Na chegada do artista</p>
+                    </div>
+                  </div>
+
+                  <div className="glass p-4 rounded-xl bg-yellow-500/10 border border-yellow-500/30 mt-4">
+                    <div className="flex items-start gap-3">
+                      <Sparkles className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                      <div className="text-left">
+                        <h5 className="text-yellow-400 font-semibold text-sm md:text-base mb-1">Forma de Pagamento</h5>
+                        <p className="text-xs md:text-sm text-slate-300">
+                          • <strong>10% de entrada</strong> para agendar a data e reservar os materiais<br />
+                          • <strong>90% restante</strong> será pago na chegada do artista no local<br />
+                          • Aceitamos: PIX, transferência e cartão
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-xs md:text-sm text-slate-400 text-center mt-4">
                     ⚠️ O valor poderá variar de acordo com a dificuldade do projeto
                   </p>
                 </div>
