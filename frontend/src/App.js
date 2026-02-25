@@ -992,7 +992,7 @@ Aguardo retorno!`;
             </motion.div>
           )}
 
-          {/* Step 5: Summary */}
+          {/* Step 5: Observações */}
           {step === 5 && (
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -1001,39 +1001,96 @@ Aguardo retorno!`;
               className="space-y-6"
             >
               <h3 className="text-2xl font-bold text-white mb-6">
-                ✅ Passo 5: Resumo do Orçamento
+                📝 Passo 5: Lista de Personagens/Observações (Opcional)
+              </h3>
+              <div className="space-y-6">
+                <div className="glass p-6 rounded-xl bg-ocean-blue/10 border border-ocean-cyan/30">
+                  <h4 className="text-lg font-semibold text-ocean-cyan mb-3 flex items-center gap-2">
+                    <Sparkles className="w-5 h-5" />
+                    Importante!
+                  </h4>
+                  <ul className="space-y-2 text-slate-300 text-sm md:text-base">
+                    <li className="flex items-start gap-2">
+                      <span className="text-ocean-cyan">•</span>
+                      <span>Liste os personagens/elementos em <strong className="text-ocean-cyan">ordem de prioridade</strong></span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-ocean-cyan">•</span>
+                      <span>Os <strong className="text-ocean-cyan">últimos da lista podem ficar de fora</strong> dependendo do espaço disponível</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-ocean-cyan">•</span>
+                      <span>Este campo é <strong className="text-ocean-cyan">opcional</strong>, mas ajuda muito no planejamento!</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <label className="block text-slate-300 mb-3 font-semibold text-lg">
+                    Lista de Personagens e Observações
+                  </label>
+                  <textarea
+                    value={formData.observacoes}
+                    onChange={(e) => setFormData({ ...formData, observacoes: e.target.value })}
+                    className="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:border-ocean-cyan focus:outline-none transition-colors h-48 resize-none"
+                    placeholder="Exemplo:&#10;1. Goku Super Saiyajin (prioridade máxima)&#10;2. Vegeta&#10;3. Naruto&#10;4. Luffy&#10;5. Logo do anime no centro&#10;&#10;Ou adicione qualquer observação sobre o projeto..."
+                  />
+                  <p className="text-sm text-slate-500 mt-2">
+                    {formData.observacoes ? formData.observacoes.length : 0} caracteres
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Step 6: Summary */}
+          {step === 6 && (
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              className="space-y-6"
+            >
+              <h3 className="text-2xl font-bold text-white mb-6">
+                ✅ Passo 6: Resumo do Orçamento
               </h3>
               <div className="space-y-4">
                 <div className="glass p-6 rounded-xl">
                   <h4 className="text-lg font-semibold text-ocean-cyan mb-4">Detalhes do Projeto</h4>
-                  <div className="space-y-2 text-slate-300">
+                  <div className="space-y-2 text-slate-300 text-sm md:text-base">
                     <p>📏 Dimensões: {formData.altura}m x {formData.largura}m ({(parseFloat(formData.altura) * parseFloat(formData.largura)).toFixed(2)}m²)</p>
                     <p>📦 Pacote: {formData.pacote === "premium" ? "PLATINUM" : formData.pacote === "intermediario" ? "GOLD" : "SILVER"}</p>
                     <p>🎨 Estilo: {formData.estilo}</p>
                     <p>👤 Personagem/Logo: {formData.personagem === "sim" ? "Sim" : "Não"}</p>
                     {formData.descricao && <p>📝 Descrição: {formData.descricao}</p>}
+                    {formData.observacoes && (
+                      <div className="mt-4 pt-4 border-t border-slate-700">
+                        <p className="font-semibold text-ocean-cyan mb-2">📝 Observações:</p>
+                        <p className="whitespace-pre-line text-slate-400">{formData.observacoes}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
 
-                <div className="glass p-8 rounded-xl text-center neon-glow">
-                  <p className="text-slate-400 mb-2">Valor Aproximado</p>
-                  <p className="text-5xl font-bold gradient-text mb-4">
+                <div className="glass p-6 md:p-8 rounded-xl text-center neon-glow">
+                  <p className="text-slate-400 mb-2 text-sm md:text-base">Valor Aproximado</p>
+                  <p className="text-3xl md:text-5xl font-bold gradient-text mb-4">
                     R$ {calculatePrice().toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
                   </p>
-                  <p className="text-sm text-slate-400">
+                  <p className="text-xs md:text-sm text-slate-400">
                     ⚠️ O valor poderá variar de acordo com a dificuldade do projeto
                   </p>
                 </div>
 
                 <motion.button
                   onClick={sendWhatsApp}
-                  className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-ocean-green to-ocean-cyan px-8 py-4 rounded-full text-white font-bold text-lg neon-glow"
+                  className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-ocean-green to-ocean-cyan px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-bold text-base md:text-lg neon-glow"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <MessageCircle className="w-6 h-6" />
+                  <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
                   Enviar Orçamento via WhatsApp
-                  <ArrowRight className="w-6 h-6" />
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                 </motion.button>
               </div>
             </motion.div>
