@@ -856,12 +856,12 @@ Aguardo retorno!`;
               </h3>
               <div className="grid gap-4">
                 {[
-                  { id: "realismo-complexo", name: "Realismo com Sombras Complexas", icon: "🖼️", difficulty: "Difícil" },
-                  { id: "realismo-simples", name: "Realismo com Sombras Simples", icon: "🎭", difficulty: "Médio" },
-                  { id: "animes", name: "Animes", icon: "⚡", difficulty: "Médio" },
-                  { id: "desenhos", name: "Desenhos Animados", icon: "🎬", difficulty: "Simples" },
-                  { id: "grafite", name: "Grafite Abstrato", icon: "🌈", difficulty: "Médio" },
-                  { id: "letras", name: "Lettering & Typography", icon: "✍️", difficulty: "Simples" }
+                  { id: "realismo-complexo", name: "Realismo com Sombras Complexas (+30%)", icon: "🖼️", difficulty: "Difícil" },
+                  { id: "realismo-simples", name: "Realismo com Sombras Simples (+10%)", icon: "🎭", difficulty: "Médio" },
+                  { id: "animes", name: "Animes (+10%)", icon: "⚡", difficulty: "Médio" },
+                  { id: "desenhos", name: "Desenhos Animados (+5%)", icon: "🎬", difficulty: "Simples" },
+                  { id: "abstrato", name: "Abstrato (+10%)", icon: "🌈", difficulty: "Médio" },
+                  { id: "letras", name: "Lettering & Typography (+5%)", icon: "✍️", difficulty: "Simples" }
                 ].map((style) => (
                   <motion.div
                     key={style.id}
