@@ -394,6 +394,31 @@ const Portfolio = () => {
       url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/c56bi08i_IMG_4833.HEIC",
       title: "Arte Contemporânea",
       description: "Estilo moderno"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/mnufcsai_IMG_1378.HEIC",
+      title: "Mural Artístico",
+      description: "Design inovador"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/8h7lk370_IMG_1525.HEIC",
+      title: "Arte Urbana",
+      description: "Street art moderna"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/9udgrcn3_IMG_2566.HEIC",
+      title: "Pintura Criativa",
+      description: "Obra exclusiva"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/y8ldxicl_IMG_4364.HEIC",
+      title: "Arte Decorativa",
+      description: "Ambiente único"
+    },
+    {
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/b9xuclyp_IMG_4833.HEIC",
+      title: "Design Personalizado",
+      description: "Projeto sob medida"
     }
   ];
 
