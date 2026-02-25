@@ -209,7 +209,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Calculator className="w-5 h-5" />
+              <Activity className="w-5 h-5" />
               Fazer Orçamento
               <ArrowRight className="w-5 h-5" />
             </motion.button>
