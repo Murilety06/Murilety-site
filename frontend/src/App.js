@@ -704,7 +704,7 @@ Aguardo retorno!`;
   };
 
   const nextStep = () => {
-    if (step < 5) setStep(step + 1);
+    if (step < 6) setStep(step + 1);
   };
 
   const prevStep = () => {
@@ -721,6 +721,8 @@ Aguardo retorno!`;
         return formData.estilo !== "";
       case 4:
         return true;
+      case 5:
+        return true; // Observações são opcionais
       default:
         return true;
     }
