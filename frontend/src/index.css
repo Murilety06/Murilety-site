@@ -135,3 +135,13 @@ html {
   );
   background-size: 1000px 100%;
 }
+
+/* Hide scrollbar for portfolio horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
