@@ -1124,15 +1124,15 @@ Aguardo retorno!`;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <ChevronDown className="w-5 h-5 rotate-90" />
+                <ChevronDown className="w-4 h-4 md:w-5 md:h-5 rotate-90" />
                 Voltar
               </motion.button>
             )}
-            {step < 5 && (
+            {step < 6 && (
               <motion.button
                 onClick={nextStep}
                 disabled={!canProceed()}
-                className={`ml-auto flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold transition-all ${
+                className={`ml-auto flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-full text-white font-semibold transition-all text-sm md:text-base ${
                   canProceed()
                     ? "bg-gradient-to-r from-ocean-blue to-ocean-cyan hover:shadow-lg"
                     : "bg-slate-700 cursor-not-allowed opacity-50"
@@ -1141,7 +1141,7 @@ Aguardo retorno!`;
                 whileTap={canProceed() ? { scale: 0.95 } : {}}
               >
                 Próximo
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
               </motion.button>
             )}
           </div>
