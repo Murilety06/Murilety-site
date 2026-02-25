@@ -487,32 +487,69 @@ const Portfolio = () => {
           <p className="text-xl text-slate-400">Confira alguns dos meus trabalhos</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {portfolioImages.map((image, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="relative group cursor-pointer card-hover"
-              onClick={() => setSelectedImage(image)}
-            >
-              <div className="relative rounded-xl overflow-hidden aspect-square">
-                <img
-                  src={image.url}
-                  alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{image.title}</h3>
-                    <p className="text-slate-300">{image.description}</p>
+        {/* Portfolio with horizontal scroll - 2 rows */}
+        <div className="space-y-6 overflow-hidden">
+          {/* Row 1 */}
+          <div className="overflow-x-auto pb-4 scrollbar-hide">
+            <div className="flex gap-4 md:gap-6" style={{ width: 'max-content' }}>
+              {portfolioImages.slice(0, Math.ceil(portfolioImages.length / 2)).map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="relative group cursor-pointer card-hover w-64 md:w-80 flex-shrink-0"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <div className="relative rounded-xl overflow-hidden aspect-square">
+                    <img
+                      src={image.url}
+                      alt={image.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                      <div>
+                        <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">{image.title}</h3>
+                        <p className="text-sm md:text-base text-slate-300">{image.description}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 */}
+          <div className="overflow-x-auto pb-4 scrollbar-hide">
+            <div className="flex gap-4 md:gap-6" style={{ width: 'max-content' }}>
+              {portfolioImages.slice(Math.ceil(portfolioImages.length / 2)).map((image, index) => (
+                <motion.div
+                  key={index + Math.ceil(portfolioImages.length / 2)}
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="relative group cursor-pointer card-hover w-64 md:w-80 flex-shrink-0"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <div className="relative rounded-xl overflow-hidden aspect-square">
+                    <img
+                      src={image.url}
+                      alt={image.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                      <div>
+                        <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">{image.title}</h3>
+                        <p className="text-sm md:text-base text-slate-300">{image.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <motion.div
