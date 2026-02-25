@@ -1215,6 +1215,24 @@ Aguardo retorno!`;
                   </p>
                 </div>
 
+                <div className="text-center text-xs text-slate-500 pt-2">
+                  <p>WhatsApp: (11) 97020-9743 | Instagram: @muriletyofi</p>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="space-y-3 mt-6">
+                <motion.button
+                  onClick={downloadSummaryImage}
+                  className="w-full flex items-center justify-center gap-3 glass hover:bg-ocean-blue/20 px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-bold text-base md:text-lg border-2 border-ocean-blue/50"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Download className="w-5 h-5 md:w-6 md:h-6" />
+                  Baixar Resumo como Imagem
+                  <Camera className="w-5 h-5 md:w-6 md:h-6" />
+                </motion.button>
+
                 <motion.button
                   onClick={sendWhatsApp}
                   className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-ocean-green to-ocean-cyan px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-bold text-base md:text-lg neon-glow"
@@ -1222,9 +1240,13 @@ Aguardo retorno!`;
                   whileTap={{ scale: 0.98 }}
                 >
                   <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
-                  Enviar Orçamento via WhatsApp
+                  Enviar Mensagem via WhatsApp
                   <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                 </motion.button>
+
+                <p className="text-xs md:text-sm text-slate-400 text-center">
+                  💡 Dica: Baixe a imagem e anexe no WhatsApp junto com a mensagem!
+                </p>
               </div>
             </motion.div>
           )}
