@@ -356,69 +356,29 @@ const Portfolio = () => {
       description: "Lettering personalizado para fã do timão"
     },
     {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/ymqrdroa_IMG_4743.HEIC",
-      title: "Arte Mural",
-      description: "Projeto personalizado"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/226ahkpi_20250717_020819.jpg",
+      title: "Mural Rick and Morty",
+      description: "Arte de personagens com fundo colorido"
     },
     {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/qgchuaw1_IMG_4833.HEIC",
-      title: "Arte em Parede",
-      description: "Design exclusivo"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/27o0s9uh_20250721_201336.jpg",
+      title: "Mural Dragon Ball",
+      description: "Goku em arte mural detalhada"
     },
     {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/2put81ji_IMG_4364.HEIC",
-      title: "Grafite Artístico",
-      description: "Street art profissional"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/daldfm2k_465993965_1094889895679783_2955846629740996983_n.jpg",
+      title: "Mural Spider-Man",
+      description: "Homem-Aranha com heróis e vilões"
     },
     {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/doxbkim9_IMG_1380.HEIC",
-      title: "Arte Criativa",
-      description: "Composição única"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/zgcze7e6_IMG_0743.JPG",
+      title: "Arte Cartoon Classic",
+      description: "Personagens clássicos de desenhos"
     },
     {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/iyrih2jx_IMG_4173.HEIC",
-      title: "Mural Decorativo",
-      description: "Ambiente transformado"
-    },
-    {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/wd0tryl6_IMG_4235.HEIC",
-      title: "Arte Personalizada",
-      description: "Projeto exclusivo"
-    },
-    {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/tghsulk5_IMG_4367.HEIC",
-      title: "Design em Parede",
-      description: "Criação artística"
-    },
-    {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/c56bi08i_IMG_4833.HEIC",
-      title: "Arte Contemporânea",
-      description: "Estilo moderno"
-    },
-    {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/mnufcsai_IMG_1378.HEIC",
-      title: "Mural Artístico",
-      description: "Design inovador"
-    },
-    {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/8h7lk370_IMG_1525.HEIC",
-      title: "Arte Urbana",
-      description: "Street art moderna"
-    },
-    {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/9udgrcn3_IMG_2566.HEIC",
-      title: "Pintura Criativa",
-      description: "Obra exclusiva"
-    },
-    {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/y8ldxicl_IMG_4364.HEIC",
-      title: "Arte Decorativa",
-      description: "Ambiente único"
-    },
-    {
-      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/b9xuclyp_IMG_4833.HEIC",
-      title: "Design Personalizado",
-      description: "Projeto sob medida"
+      url: "https://customer-assets.emergentagent.com/job_vibrant-interactive/artifacts/frveat9c_IMG_1034.JPG",
+      title: "Arte Motivacional Empresarial",
+      description: "Lettering e design corporativo"
     }
   ];
 
