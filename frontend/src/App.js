@@ -613,6 +613,33 @@ const BudgetCalculator = () => {
 
     let finalPrice = Math.max(basePrice, minPrice);
 
+    // Aplicar percentual do estilo
+    if (formData.estilo) {
+      let stylePercentage = 0;
+      switch (formData.estilo) {
+        case "realismo-complexo":
+          stylePercentage = 0.30; // 30%
+          break;
+        case "realismo-simples":
+          stylePercentage = 0.10; // 10%
+          break;
+        case "animes":
+          stylePercentage = 0.10; // 10%
+          break;
+        case "desenhos":
+          stylePercentage = 0.05; // 5%
+          break;
+        case "abstrato":
+          stylePercentage = 0.10; // 10%
+          break;
+        case "letras":
+          stylePercentage = 0.05; // 5%
+          break;
+      }
+      finalPrice = finalPrice + (finalPrice * stylePercentage);
+    }
+
+    // Adicionar custo de personagem
     if (formData.personagem === "sim") {
       finalPrice += 600;
     }
