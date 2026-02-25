@@ -10,6 +10,7 @@ import {
   Star, 
   ChevronDown,
   ChevronRight,
+  ChevronLeft,
   Sparkles,
   Zap,
   Heart,
