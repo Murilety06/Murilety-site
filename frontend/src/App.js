@@ -17,7 +17,7 @@ import {
   X,
   Menu,
   ArrowRight,
-  Calculator,
+  Activity,
   GraduationCap,
   Phone,
   Mail
