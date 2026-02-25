@@ -1097,18 +1097,18 @@ Aguardo retorno!`;
           )}
 
           {/* Real-time Price Display */}
-          {step < 5 && formData.altura && formData.largura && formData.pacote && (
+          {step < 6 && formData.altura && formData.largura && formData.pacote && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-8 glass p-6 rounded-xl text-center"
+              className="mt-6 md:mt-8 glass p-4 md:p-6 rounded-xl text-center"
             >
-              <p className="text-slate-400 mb-2">Valor estimado atual</p>
-              <p className="text-4xl font-bold gradient-text">
+              <p className="text-slate-400 mb-2 text-sm md:text-base">Valor estimado atual</p>
+              <p className="text-2xl md:text-4xl font-bold gradient-text break-words">
                 R$ {calculatePrice().toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
               </p>
               {!formData.estilo && step >= 2 && (
-                <p className="text-sm text-slate-500 mt-2">
+                <p className="text-xs md:text-sm text-slate-500 mt-2">
                   * Adicione o estilo para ver o valor final
                 </p>
               )}
@@ -1116,11 +1116,11 @@ Aguardo retorno!`;
           )}
 
           {/* Navigation Buttons */}
-          <div className="flex justify-between mt-12">
+          <div className="flex justify-between mt-8 md:mt-12">
             {step > 1 && (
               <motion.button
                 onClick={prevStep}
-                className="flex items-center gap-2 glass px-6 py-3 rounded-full text-white hover:bg-white/10 transition-all"
+                className="flex items-center gap-2 glass px-4 md:px-6 py-2 md:py-3 rounded-full text-white hover:bg-white/10 transition-all text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
