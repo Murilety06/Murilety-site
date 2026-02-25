@@ -1147,7 +1147,12 @@ Aguardo retorno!`;
               <h3 className="text-2xl font-bold text-white mb-6">
                 ✅ Passo 6: Resumo do Orçamento
               </h3>
-              <div className="space-y-4">
+              <div ref={summaryRef} className="space-y-4 p-6 rounded-2xl" style={{ background: '#0f172a' }}>
+                <div className="text-center mb-4">
+                  <h2 className="text-3xl font-bold gradient-text mb-2">MURILETY - Orçamento</h2>
+                  <p className="text-slate-400 text-sm">Arte em Paredes Profissional</p>
+                </div>
+                
                 <div className="glass p-6 rounded-xl">
                   <h4 className="text-lg font-semibold text-ocean-cyan mb-4">Detalhes do Projeto</h4>
                   <div className="space-y-2 text-slate-300 text-sm md:text-base">
